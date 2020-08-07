@@ -20,10 +20,18 @@ describe('SomeService', () => {
 
   afterEach(() => {
     // fix
-    // service.ngOnDestroy();
+    service.ngOnDestroy();
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
+  });
+
+  it('should have on destroy', () => {
+    expect(service.ngOnDestroy).toBeTruthy();
+  });
+
+  it('should fail', () => {
+    expect(false).toBeTruthy();
   });
 });
